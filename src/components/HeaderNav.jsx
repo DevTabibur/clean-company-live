@@ -1,14 +1,14 @@
+// @ts-nocheck
 import React from "react";
 
-const HeaderNav = () => {
+const HeaderNav = ({ children }) => {
   return (
     <>
       <div className="drawer drawer-end">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
           <div className="w-full navbar bg-base-300">
-
-          <div className="flex-1 px-2 mx-2">Clean CO.</div>
+            <div className="flex-1 px-2 mx-2">Clean CO.</div>
 
             <div className="flex-none lg:hidden">
               <label for="my-drawer-3" className="btn btn-square btn-ghost">
@@ -31,16 +31,25 @@ const HeaderNav = () => {
             <div className="flex-none hidden lg:block">
               <ul className="menu menu-horizontal">
                 <li>
-                  <a>Navbar Item 1</a>
+                  <a className="rounded-lg">Home</a>
                 </li>
                 <li>
-                  <a>Navbar Item 2</a>
+                <a className="rounded-lg">About</a>
+                </li>
+                <li>
+                <a className="rounded-lg">Services</a>
+                </li>
+                <li>
+                <a className="rounded-lg">Contact</a>
+                </li>
+                <li>
+                <a className="rounded-lg">Login</a>
                 </li>
               </ul>
             </div>
-
           </div>
-
+          {/* content here */}
+          {children}
         </div>
         <div className="drawer-side">
           <label for="my-drawer-3" className="drawer-overlay"></label>
