@@ -8,17 +8,27 @@ import Register from './components/pages/Shared/Register/Register';
 import { Route, Routes } from 'react-router-dom';
 
 // 52 mnt theke start
+const publicRoute = [
+  {path: "/", name: "Home", Component: Home},
+  {path: "/about", name: "About", Component: About},
+  {path: "/services", name: "Services", Component: Services},
+  {path: "/contact", name: "Contact", Component: Contact},
+  {path: "/login", name: "Login", Component: Login}
+]
+
+// 1hr 20 mnt theke again
+
 function App() {
+  
   return (
     <>
       <HeaderNav>
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/home' element={<Home/>}></Route>
-        <Route path='/about' element={<About/>}></Route>
-        <Route path='/services' element={<Services/>}></Route>
-        <Route path='/contact' element={<Contact/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
+      {
+          publicRoute.map(({path, Component}, index) => (
+            <Route path={path} element={<Component/>}/>
+          ))
+        }
       </Routes>
       </HeaderNav>
       

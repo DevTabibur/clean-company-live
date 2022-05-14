@@ -7,3 +7,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 2. tailwind
 3. daisy ui
 4. react Router
+5. Theme Changer daisy UI
+6. Theme-change
